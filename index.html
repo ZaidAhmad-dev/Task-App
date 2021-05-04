@@ -14,17 +14,18 @@
             <a href="#" class="logo">Remember<span>That</span></a>
             <img id="mobile-cta" class="mobile-menu" src="./images/menu.svg" alt="Open Navigation">
             <nav>
-                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="">
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation">
+                
                 <ul class="primary-nav">
-                    <li class="current"><a href="#Home">Home</a></li>
-                    <li><a href="#features"></a>Features</li>
-                    <li><a href="#pricing"></a>Pricing</li>
+                    <li class="current"><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
                 </ul>
 
                 <ul class="secondary-nav">
-                    <li class=""><a href="#contact">Contact</a></li>
-                    <li><a href="#go-premium"></a>Go Premium</li>
-                 </ul>
+                    <li><a href="#">Contact</a></li>
+                    <li class="go-premium-cta"><a href="#">Go Premium</a></li>
+                </ul>
             </nav>
         </div>
     </div>
@@ -104,6 +105,21 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta');
+        const nav = document.querySelector('nav');
+        const mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', ()=> {
+            nav.classList.add('menu-btn');
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+
+    </script>
     
 </body>
 </html>
